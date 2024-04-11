@@ -1,10 +1,8 @@
-# MS-Teams-Selenium-Joiner
-<img src="https://en.meming.world/images/en/thumb/4/4a/Modern_Problems_Require_Modern_Solutions.jpg/300px-Modern_Problems_Require_Modern_Solutions.jpg" /><br>
-  Selenium script to automatically join Microsoft Teams meetings.<br>
-  Automatically turns off your microphone and camera before joining.<br>
-  Automatic login and blacklist can be set in the config file.  
-  Always joins the newest meeting <br>
-  Leaves either after a specified time, if you are the last person in the meeting or only if a new one is available<br>
+# MS-Teams Meeting Joiner
+  1. Selenium script to automatically join Microsoft Teams meetings.<br>
+  2. Automatically turns off your microphone and camera before joining.<br>
+  3. Automatic login and blacklist can be set in the config file.  
+  4. Leaves either after a specified time, if you are the last person in the meeting or only if a new one is available<br>
 
 ## Configuration options  
   
@@ -22,7 +20,6 @@ If true, skips the `Start [s], Reload teams [r], Quit [q]` dialog and starts on 
 
 - **organisation_num:**     
 If your Teams account is in multiple organisations, as seen in the example below, change the organisation_num to the number of the list item (counting starts from 1)  
-<img width="30%" src="https://imgur.com/CWpK4wk.png">
 
 - **random_delay:**  
 If true, adds a random delay (10s-30s) before joining a meeting. Can be useful so the bot seems more "human like".  
@@ -45,19 +42,6 @@ If true, mutes all the sounds.
 - **chrome_type:**     
 Valid options: `google-chrome`, `chromium`, `msedge`. By default, google chrome is used, but the script can also be used with Chromium or Microsoft Edge.
 
-- **blacklist:**  
-A list of Teams and their channels to ignore. Meetings ocurring in these channels will not be joined.  
-If you have a Team called "Test1" and, within that, two channels called "General" and "Channel1" and you don't want to join meetings in the "General" Channel: 
-```json
-"blacklist": [  
-  {  
-    "team_name": "Test1",  
-    "channel_names": [  
-      "General"
-    ]  
-  }
-]
-```
 
 ## Run the script  
   
@@ -65,10 +49,4 @@ If you have a Team called "Test1" and, within that, two channels called "General
  2. Edit the "config.json" file to fit your preferences (optional)  
  3. Install Selenium and webdriver_manager
  4. Run [auto_joiner.py](auto_joiner.py): `python auto_joiner.py`  
- 
-## Problems with the script 
-  
- 1. Might join wrong meeting if more than one class is running simultaneously😢
- 2. If there is a possiblity of continuation of class after the scheduled duration auto_leave_after_min option is not recommended🤷‍♂️
- 3. Professor ne kuch puch liya toh ghanta kuch nhi kr skte😂
  
